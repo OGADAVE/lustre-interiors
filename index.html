@@ -20,8 +20,12 @@
 <link rel="icon"  href="images/logo1.png">
 
   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -32,22 +36,18 @@
   <h1>LUSTRE</h1>
 </div>
 
+<!-- NAVBAR -->
 <header class="navbar">
+
+  <!-- LOGO -->
   <div class="logo">
-    <div class="logo-icon">
-      <img src="images/logo1.png" alt="Lustre Interiors Logo">
-    </div>
     <div class="logo-text">
-      <span>LUSTRE</span> INTERIORS
+      <span class="logo-script">Lustre</span>
+      <span class="logo-sub">INTERIORS</span>
     </div>
   </div>
 
-  <!-- MENU TOGGLE (MOBILE) -->
-  <div class="menu-toggle" id="menu-toggle">
-    <i class="fas fa-bars"></i>
-  </div>
-
-  <!-- NAV LINKS -->
+  <!-- NAV LINKS (CENTER) -->
   <nav id="nav-menu">
     <a href="index.html" class="nav-link active">Home</a>
     <a href="about.html" class="nav-link">About</a>
@@ -55,6 +55,11 @@
     <a href="portfolio.html" class="nav-link">Portfolio</a>
     <a href="contact.html" class="nav-link">Contact</a>
   </nav>
+
+  <!-- MENU TOGGLE (RIGHT) -->
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
 
 </header>
 
@@ -70,9 +75,7 @@
 <!-- ABOUT -->
 <section class="section fade-in">
   <h2>About Us</h2>
-  <p>
-    Lustre Interiors creates timeless, luxurious spaces that combine beauty, comfort, and functionality.
-  </p>
+  <p>Lustre Interiors creates timeless, luxurious spaces that combine beauty, comfort, and functionality.</p>
 </section>
 
 <!-- SERVICES -->
@@ -95,7 +98,6 @@
 <div class="services-btn">
   <a href="services.html" class="btn">Explore All Services</a>
 </div>
-
 </section>
 
 <!-- PORTFOLIO -->
@@ -111,11 +113,11 @@
   </div>
 
   <!-- GALLERY -->
-  <div class="gallery">
-    <img src="images/conference3.png" class="filter living">
-    <img src="images/livingroom3.jpeg" class="filter bedroom">
-    <img src="images/md2.png" class="filter office">
-    <img src="images/lobby2.png" class="filter living">
+ <div class="gallery">
+    <img src="images/conference3.png" alt="Interior project" class="filter living">
+    <img src="images/livingroom3.jpeg" alt="Interior project" class="filter bedroom">
+    <img src="images/md2.png" alt="Interior project" class="filter office">
+    <img src="images/lobby2.png" alt="Interior project" class="filter living">
   </div>
 
   <!-- VIEW MORE BUTTON -->
@@ -156,10 +158,13 @@
 
   <!-- FORM -->
 <form action="https://formspree.io/f/xykbapwp" method="POST" class="contact-form">      
-    <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Tell us about your project..." required></textarea>
-      <button type="submit">Send Message</button>
+     <input type="text" name="name" placeholder="Your Name" required>
+
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+
+    <button type="submit">Send Message</button>
     </form>
 </section>
 
