@@ -1,5 +1,39 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  // ===== LOADER =====
+  const loader = document.getElementById("loader");
+
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      loader.style.opacity = "0";
+      loader.style.transition = "0.6s ease";
+
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 600);
+    }, 1500);
+  });
+
+  // ===== MOBILE MENU =====
+  const toggle = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  if (toggle && navMenu) {
+    toggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  }
+
+  // ===== ACTIVE LINK =====
+  const links = document.querySelectorAll(".nav-link");
+  const currentPage = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+
   // SCROLL ANIMATION
   const elements = document.querySelectorAll('.fade-in');
 
@@ -15,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('scroll', reveal);
   reveal();
 
+  
   // NAVBAR SCROLL EFFECT
   const navbar = document.querySelector('.navbar');
   window.addEventListener('scroll', () => {
@@ -62,30 +97,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.closeLightbox = function() {
     lightbox.style.display = 'none';
-  }
-
-  // LOADER
-  const loader = document.getElementById('loader');
-  window.addEventListener('load', () => {
-    loader.style.display = 'none';
-  });
-
-});
-
-// MOBILE MENU TOGGLE
-const toggle = document.getElementById('menu-toggle');
-const navMenu = document.getElementById('nav-menu');
-
-toggle.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-});
-
-// ACTIVE LINK BASED ON PAGE
-const links = document.querySelectorAll('.nav-link');
-const currentPage = window.location.pathname.split("/").pop();
-
-links.forEach(link => {
-  if (link.getAttribute("href") === currentPage) {
-    link.classList.add("active");
   }
 });
