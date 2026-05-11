@@ -3,16 +3,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // ===== LOADER =====
   const loader = document.getElementById("loader");
 
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      loader.style.opacity = "0";
-      loader.style.transition = "0.6s ease";
+  window.addEventListener("load", function () {
+  const loader = document.getElementById("loader");
 
-      setTimeout(() => {
-        loader.style.display = "none";
-      }, 600);
-    }, 1500);
-  });
+  loader.style.opacity = "0";
+  loader.style.transition = "0.5s ease";
+
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 500);
+});
 
   // ===== MOBILE MENU =====
   const toggle = document.getElementById("menu-toggle");
